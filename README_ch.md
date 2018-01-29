@@ -5,7 +5,6 @@
 
 ## 安装和使用
 
-Once, install rate component for your project
 先从npm安装到项目里
 
 ```bash
