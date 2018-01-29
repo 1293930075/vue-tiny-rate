@@ -1,21 +1,18 @@
 # Vue Tiny Rate
 
 
-## Translation
+> 最小的Vue评级组件
 
-  - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) [Chinese (Simplified)](./README_ch.md)
-
-> The Smallest Rating Component for Vuejs
-
-## Installation and usage
+## 安装和使用
 
 Once, install rate component for your project
+先从npm安装到项目里
 
 ```bash
 npm install vue-tiny-rate --save
 ```
 
-Import Vue Rate into your app
+在项目里导入Rate组件
 
 ```javascript
 import Rate from 'vue-tiny-rate';
@@ -27,7 +24,7 @@ new Vue({
 })
 ```
 
-Use HTML template
+HTML里使用
 
 ```html
 <Rate />
@@ -35,9 +32,9 @@ Use HTML template
 ![](./img/00.png)
 
 
-## Options from props
+## 配置项
 
-- `value {number|string}` : Star value `default:0`
+- `value {number|string}` : 评几星，支持小数 `默认:0`
 
 ```html
 <Rate value="0.5"></Rate>
@@ -47,7 +44,7 @@ Use HTML template
 ![](./img/01.png)
 
 
-- `length {number|string}` : Star size `default:5`
+- `length {number|string}` : 一共几个星 `默认:5`
 
 ```html
 <Rate value="2" length="4"></Rate>
@@ -57,7 +54,7 @@ Use HTML template
 ![](./img/02.png)
 
 
-- `theme {color|enum('yellow','green','blue','red','purple','orange','black','wihte')}`: Star color. `default: yellow`
+- `theme {color|enum('yellow','green','blue','red','purple','orange','black','wihte')}`: 主题色. `默认: yellow`
 
 ```html
 <Rate value="4.5">Yellow</Rate>
@@ -74,7 +71,7 @@ Use HTML template
 ![](./img/03.png)
 
 
-- `size {number|string}`: Rate size. 
+- `size {number|string}`: 星星的大小. 
 
 ```html
 <Rate value="4.5" size='12px'>12px</Rate>
@@ -86,7 +83,7 @@ Use HTML template
 ![](./img/04.png)
 
 
-- `animate {number|string}`: Rate animate duration. `default:0`
+- `animate {number|string}`: 是否有动画. `default:0`
 
 ```html
 <Rate value="3.5" animate='1'>1s</Rate>
