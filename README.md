@@ -4,6 +4,17 @@
 > The Smallest Rating Component for Vuejs
 
 
+
+## based one line rate component function
+
+```js
+function rate(num){
+  return "★★★★★☆☆☆☆☆".slice(5 - num, 10 - num);
+}
+
+```
+
+
 ## Features
 
 * based ☆ and ★

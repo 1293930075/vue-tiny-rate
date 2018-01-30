@@ -5,6 +5,16 @@
 
 
 
+## 基于[一行代码写评级组件](https://www.zhihu.com/question/46943112/answer/113583615)
+
+```js
+function rate(num){
+  return "★★★★★☆☆☆☆☆".slice(5 - num, 10 - num);
+}
+
+```
+
+
 ## 功能
 
 * 基于☆ 和 ★
