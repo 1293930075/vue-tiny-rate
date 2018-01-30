@@ -43,7 +43,7 @@ Use HTML template
 ```html
 <Rate />
 ```
-![](./img/00.png)
+![](http://image.shengxinjing.cn/rate/00.png)
 
 
 ## Options from props
@@ -55,7 +55,7 @@ Use HTML template
 <Rate value="1"></Rate>
 <Rate value="3.6"></Rate>
 ```
-![](./img/01.png)
+![](http://image.shengxinjing.cn/rate/01.png)
 
 - `readonly {boolean}` : Rate read-only. `default:false`
 
@@ -64,7 +64,7 @@ Use HTML template
 <Rate value="1"></Rate>
 <Rate value="3.6" readonly="true"></Rate>
 ```
-![](./img/01.gif)
+![](http://image.shengxinjing.cn/rate/01.gif)
 
 - `length {number|string}` : Star size `default:5`
 
@@ -73,7 +73,7 @@ Use HTML template
 <Rate value="3.6" length="8"></Rate>
 <Rate value="7.6" length="10"></Rate>
 ```
-![](./img/02.png)
+![](http://image.shengxinjing.cn/rate/02.png)
 
 
 - `theme {color|enum('yellow','green','blue','red','purple','orange','black','wihte')}`: Star color. `default: yellow`
@@ -90,7 +90,7 @@ Use HTML template
 
 ```
 
-![](./img/03.png)
+![](http://image.shengxinjing.cn/rate/03.png)
 
 
 - `size {number|string}`: Rate size. 
@@ -102,7 +102,7 @@ Use HTML template
 <Rate value="4.5" size='40px'>40px</Rate>
 ```
 
-![](./img/04.png)
+![](http://image.shengxinjing.cn/rate/04.png)
 
 
 - `animate {number|string}`: Rate animate duration. `default:0`
@@ -112,7 +112,7 @@ Use HTML template
 <Rate value="3.5" animate='2'>2s</Rate>
 <Rate value="3.5" animate='3'>3s</Rate>
 ```
-![](./img/05.gif)
+![](http://image.shengxinjing.cn/rate/05.gif)
 
 
 ## Events
@@ -139,7 +139,7 @@ new Vue({
   }
 })
 ```
-![](./img/06.gif)
+![](http://image.shengxinjing.cn/rate/06.gif)
 
 ## License
 
