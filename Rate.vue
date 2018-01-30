@@ -46,9 +46,6 @@ export default {
         transition: `width ${this.animate}s`
       }
     },
-    initStar (char, len) {
-      return new Array(len - 0).fill(char)
-    },
     mouseOver (i) {
       if (this.readonly) {
         return false
@@ -69,10 +66,12 @@ export default {
   created: function () {
     if (this.animate === '0' || this.animate === 0) {
       this.setStyle()
+    }else{
+      setTimeout(() => {
+        this.setStyle()
+      })      
     }
-    setTimeout(() => {
-      this.setStyle()
-    })
+
   }
 }
 </script>
