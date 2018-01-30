@@ -18,7 +18,7 @@ function rate(num){
 ## Features
 
 * based ☆ and ★
-* support float 
+* support float such as 3.5  4.7
 * theme
 * animate
 * size
