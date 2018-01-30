@@ -5,7 +5,7 @@
 
 
 
-## based one line rate component function
+## based single-line rate component
 
 ```js
 function rate(num){
