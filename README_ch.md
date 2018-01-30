@@ -3,6 +3,16 @@
 
 > 最小的Vue评级组件
 
+
+
+## 功能
+
+* 基于☆ 和 ★
+* 支持小数评级
+* 主题颜色配置
+* 动画效果
+* 星星大小
+
 ## 安装和使用
 
 先从npm安装到项目里
@@ -42,6 +52,16 @@ HTML里使用
 ```
 ![](./img/01.png)
 
+
+
+- `readonly {boolean}` : 是否是只读. `default:false`
+
+```html
+<Rate value="0.5"></Rate>
+<Rate value="1"></Rate>
+<Rate value="3.6" readonly="true"></Rate>
+```
+![](./img/01.gif)
 
 - `length {number|string}` : 一共几个星 `默认:5`
 
@@ -89,7 +109,33 @@ HTML里使用
 <Rate value="3.5" animate='2'>2s</Rate>
 <Rate value="3.5" animate='3'>3s</Rate>
 ```
-![](./img/05.png)
+![](./img/05.gif)
+
+## Events
+
+- `onRate`: 选中星级后的评价. 
+
+```html
+<Rate @onRate="onrate" :value="value"/>
+```
+
+```js
+new Vue({
+  el: '#app',
+  components: { Rate },
+  template: '<Rate @onRate="onrate" :value="value"/>',
+  data: {
+    value: '2.6'
+  },
+  methods: {
+    onrate (num) {
+      console.log(num)
+      this.value = num
+    }
+  }
+})
+```
+![](./img/06.gif)
 
 
 ## License

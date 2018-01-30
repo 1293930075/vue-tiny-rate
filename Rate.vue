@@ -1,11 +1,12 @@
 <template>
   <div  v-bind:style="this.styleFont">
     <slot></slot>
-    <div class='rate'>
-      {{"☆".repeat(parseInt(length))}}
-      <span v-bind:style="styleObject">{{"★".repeat(parseInt(length))}}</span>
+    <div class='rate' @mouseout="mouseOut">
+      <span @mouseover="mouseOver(num)"  v-for='num in parseInt(length)' :key="num">☆</span>
+      <span class='hollow' :style="styleObject">
+        <span @click="onRate(num)" @mouseover="mouseOver(num)" v-for='num in parseInt(length)' :key="num">★</span>
+      </span>
     </div>
-
   </div>
 </template>
 <script>
@@ -35,7 +36,8 @@ export default {
     length: {type: [Number, String], default: '5'},
     animate: {type: [Number, String], default: '0'},
     theme: {type: [String], default: 'yellow'},
-    size: {type: [String]}
+    size: {type: [String]},
+    readonly: {type: [Boolean], defalut: false}
   },
   methods: {
     setStyle: function () {
@@ -43,6 +45,25 @@ export default {
         width: this.value + 'em',
         transition: `width ${this.animate}s`
       }
+    },
+    initStar (char, len) {
+      return new Array(len - 0).fill(char)
+    },
+    mouseOver (i) {
+      if (this.readonly) {
+        return false
+      }
+      // console.log(1)
+      this.styleObject.width = i + 'em'
+    },
+    mouseOut () {
+      this.styleObject.width = this.value + 'em'
+    },
+    onRate (i) {
+      if (this.readonly) {
+        return false
+      }
+      this.$emit('onRate', i)
     }
   },
   created: function () {
@@ -61,7 +82,7 @@ export default {
   position:relative;
   display: inline-block;
 }
-.rate span {
+.rate > span.hollow {
   position:absolute;
   display: inline-block;
   top:0;
@@ -69,5 +90,4 @@ export default {
   width:0;
   overflow:hidden;
 }
-
 </style>
