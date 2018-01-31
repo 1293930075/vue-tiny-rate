@@ -1,6 +1,6 @@
 {
   "name": "vue-tiny-rate",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "the smallest rating component  for Vue2.x",
   "main": "Rate.vue",
   "scripts": {
@@ -24,5 +24,7 @@
   "devDependencies": {
     "vue": "^2.5.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "tiny-rate": "^0.1.0"
+  }
 }

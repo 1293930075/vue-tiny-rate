@@ -155,6 +155,10 @@ new Vue({
 ```
 ![](http://image.shengxinjing.cn/rate/06.gif)
 
+## Link
+* [tiny-rate](https://github.com/shengxinjing/tiny-rate)
+* [react-tiny-rate](https://github.com/shengxinjing/react-tiny-rate)
+
 ## License
 
 MIT.
