@@ -1,13 +1,16 @@
 <template>
-  <div  v-bind:style="this.styleFont">
+<div  :style="fontstyle">
     <slot></slot>
     <div class='rate' @mouseout="mouseOut">
-      <span @mouseover="mouseOver(num)"  v-for='num in parseInt(length)' :key="num">☆</span>
-      <span class='hollow' :style="styleObject">
-        <span @click="onRate(num)" @mouseover="mouseOver(num)" v-for='num in parseInt(length)' :key="num">★</span>
+      <span @mouseover="mouseOver(num)"  v-for='num in len' :key="num">☆</span>
+      <span class='hollow' :style="{width:styleObject.width,transition:styleObject.transition}">
+        <span @click="onRate(num)" @mouseover="mouseOver(num)" v-for='num in len' :key="num">★</span>
       </span>
-    </div>
-  </div>
+    </div> 
+</div>
+  
+
+
 </template>
 <script>
 export default {
@@ -31,10 +34,18 @@ export default {
       }
     }
   },
+  computed:{
+      fontstyle(){
+          return `color:${this.styleFont.color};font-size:${this.styleFont.fontSize}`
+      },
+      len(){
+          return parseInt(this.length)
+      }
+  },
   props: {
     value: {type: [Number, String], default: '0'},
     length: {type: [Number, String], default: '5'},
-    animate: {type: [Number, String], default: '0'},
+    animate: {type: [Number, String], default: '1'},
     theme: {type: [String], default: 'yellow'},
     size: {type: [String]},
     readonly: {type: [Boolean], defalut: false}
@@ -66,12 +77,11 @@ export default {
   created: function () {
     if (this.animate === '0' || this.animate === 0) {
       this.setStyle()
-    }else{
+    } else {
       setTimeout(() => {
         this.setStyle()
-      })      
+      })
     }
-
   }
 }
 </script>
